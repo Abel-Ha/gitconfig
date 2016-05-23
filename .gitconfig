@@ -1,4 +1,7 @@
 [alias]
+    lg1 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+    lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+    lg = !"git lg1"
     rb = rebase
     rbc = rebase --continue
     rba = rebase --abort
@@ -34,33 +37,33 @@
     lgb = log --graph --pretty=format:'%C(yellow)%h%Creset %C(red)%d%Creset %s %Cgreen(%cr) %C(bold cyan)<%an>%Creset' --abbrev-commit --date=relative --branches 
     lga = log --graph --pretty=format:'%C(yellow)%h%Creset %C(red)%d%Creset %s %Cgreen(%cr) %C(bold cyan)<%an>%Creset' --abbrev-commit --date=relative --all 
 [user]
-	name = Abel Hadjadj
-	email = abelhadjadj@yahoo.fr
+    name = Abel Hadjadj
+    email = abelhadjadj@yahoo.fr
 [core]
-	editor = vim
+    editor = vim
 [color]
-	ui = true
+    ui = true
 #[merge]
-#	tool = extMerge
+#   tool = extMerge
 #[mergetool "extMerge"]
-#	cmd = extMerge \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
+#   cmd = extMerge \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
 #[mergetool]
-#	trustExitCode = false
+#   trustExitCode = false
 [diff]
-#	external = extDiff
-#	external = /home/abel/git-meld
-	tool = meld
+#   external = extDiff
+#   external = /home/abel/git-meld
+    tool = meld
 
 [push]
-	default = current
+    default = current
 [difftool]
-	prompt = false
+    prompt = false
 [merge]
-	tool = meld
+    tool = meld
 [mergetool]
-	prompt = false
+    prompt = false
 #[mergetool "meld"]
-#	cmd = meld \"$BASE $LOCAL $REMOTE $MERGED\"
-#	trustExitCode = false
+#   cmd = meld \"$BASE $LOCAL $REMOTE $MERGED\"
+#   trustExitCode = false
 #[difftool "meld"]
-#	cmd = meld \"$LOCAL $REMOTE\"
+#   cmd = meld \"$LOCAL $REMOTE\"
